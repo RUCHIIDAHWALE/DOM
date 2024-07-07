@@ -6,6 +6,11 @@
     <title>Document</title>
 
     <style>
+
+        *{
+            background-color: darkgray;
+        }
+        
         .app-container{
             display: flex;
             flex-direction: column;
@@ -15,9 +20,12 @@
 
 
         .input-box{
-
+        height: 50px;
           width: 200px;
-          margin: 10px auto;  
+          margin: 10px auto; 
+          border: solid 2px black; 
+          background-color: cadetblue;
+          border-radius: 5px;
 
         }
 
@@ -26,11 +34,17 @@
         }
 
         .btn{
+            background-color: aquamarine;
+            height: 50px;
+            width: 100px;
             width: 150px;
             margin-top: 30px ;
+             border: solid 2px black;
+             border-radius: 10px; 
         }
 
         .text-result{
+            
             margin: 0;
             padding: 0;
             font-size: 30px;
@@ -41,7 +55,7 @@
 <body>
 
 <div class="app-container">
-    <h1 class="app-title">Sum of Two Numbers</h1>
+    <h1 class="app-title">Sum Of Two Numbers : </h1>
 
     <input type="text" class="input-box" id="input-num1" onkeyup="calSum()"/>
     <input type="text"class="input-box" id="input-num2" onkeyup="calSum()"/>
@@ -71,6 +85,7 @@
 
             resultElement.innerText = `Sum : ${Sum}`
         }
+
 
         function reset()
         {
